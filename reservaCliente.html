@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easybook</title>
+
+    <link href="/css/custom.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="justify-content-start d-flex align-items-start ctn-height vh-100">
+        <!-- ASIDE -->
+
+        <div class="d-flex flex-column flex-shrink-0 text-bg-primary vh-100 ctn-aside">
+            <a href="index.html"
+                class="d-flex align-items-center  link-body-emphasis text-decoration-none">
+                <img class="logo" src="img/easybook-logo.svg" alt="logo" />
+                <span class="fs-4 pt-4 text-secondary">Easybook</span>
+            </a>
+            <hr />
+            <ul class="nav nav-pills flex-column mb-auto text-lifht">
+                <li class="nav-item">
+                    <a href="Hoy.html" class="nav-link link-body-emphasis text-secondary" aria-current="page"> HOY
+                    </a>
+                </li>
+                <li>
+                    <a href="Reservas.html" class="nav-link link-body-emphasis text-secondary"> Reserva </a>
+                </li>
+            </ul>
+            <hr />
+
+            <!-- FOOTER -->
+
+            <div class="container-fluid">
+                <footer class="p-2">
+                    <p class="text-center text-secondary">© Easybook 2024</p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- INFORMACION -->
+
+        <section class=" container-fluid d-flex flex-column align-items-start">
+            
+            <h1 class="w-75 text-primary py-3">Nueva Reserva:</h1>
+
+            <div class="col-md-7 col-lg-8 p-2">
+                <h4 class="mb-3 text-primary">Titular de la reserva</h4>
+                <form class="needs-validation text-primary" novalidate="">
+
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="nombre" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" placeholder="Juan" value="" required="">
+                      <div class="invalid-feedback">
+                        Nombre valido es requerido
+                      </div>
+                    </div>
+        
+                    <div class="col-sm-6">
+                      <label for="apellido" class="form-label">Apellido</label>
+                      <input type="text" class="form-control" id="apellido" placeholder="Perez" value="" required="">
+                      <div class="invalid-feedback">
+                        Apellido valido es requerido
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                      <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                      </div>
+                    </div>
+        
+                    <div class="col-12">
+                      <label for="telefono" class="form-label">Telefono/Celular</label>
+                      <input type="text" class="form-control" id="telefono" placeholder="XXX-XXX-XXX">
+                    </div>
+        
+                    <div class="col-md-5">
+                      <label for="horario" class="form-label">Horario</label>
+                      <select class="form-select" id="horario" required="">
+                        <option value="">Elegir Turno</option>
+                        <option value="1">20:00</option>
+                        <option value="2">20:30</option>
+                        <option value="3">21:00</option>
+                        <option value="3">21:30</option>
+                        <option value="3">22:00</option>
+                        <option value="3">22:30</option>
+                        <option value="3">23:00</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Seleccione un horario.
+                      </div>
+                    </div>
+        
+                <div class="w-100 justify-content-center d-flex"><button class="w-50 btn btn-primary btn-lg my-4 mx-2" type="submit">Confirmar</button></div>
+                </form>
+              
+            </section>
+    </main>
+</body>
+
+</html>
