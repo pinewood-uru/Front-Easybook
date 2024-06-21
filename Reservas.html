@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easybook</title>
+
+    <link href="/css/custom.css" rel="stylesheet" />
+</head>
+
+<body>
+    <main class="justify-content-start d-flex align-items-start ctn-height vh-100">
+        <!-- ASIDE -->
+
+        <div class="d-flex flex-column flex-shrink-0 bg-primary vh-100 ctn-aside">
+            <a href="index.html" class="d-flex align-items-center  link-body-emphasis text-secondary text-decoration-none">
+                <img class="logo" src="img/easybook-logo.svg" alt="logo" />
+                <span class="fs-4 pt-4">Easybook</span>
+            </a>
+            <hr />
+            <ul class="nav nav-pills flex-column mb-auto text-secondary">
+                <li class="nav-item">
+                    <a href="Hoy.html" class="nav-link active link-body-emphasis text-light" aria-current="page"> HOY </a>
+                </li>
+                <li>
+                    <a href="Reservas.html" class="nav-link link-body-emphasis text-secondary"> Reserva </a>
+                </li>
+            </ul>
+            <hr />
+
+            <!-- FOOTER -->
+
+            <div class="container-fluid bg-primary">
+                <footer class="p-2">
+                    <p class="text-center text-secondary">© Easybook 2024</p>
+                </footer>
+            </div>
+        </div>
+
+        <!-- INFORMACION -->
+
+        <section class=" container-fluid d-flex flex-column align-items-start">
+            <!-- TABLA -->
+            <h1 class="w-75 text-primary py-3">Reservas:</h1>
+
+            <table class="container-fluid table table-bordered border-primary w-100 justify-content-start">
+
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Personas</th>
+                        <th scope="col">Notas</th>
+                        <th scope="col">Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>5</td>
+                        <td>-</td>
+                        <td>Date</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <!-- BOTONES -->
+
+            <section class="container-fluid d-flex justify-content-start my-2 gap-2 w-100">
+                <a href="reservaCliente.html" type="button" class="btn btn-primary text-secondary">Reserva</a>
+                <a href="" type="button" class="btn btn-outline-primary text-primary">Eliminar Reserva</a>
+                <a href="" type="button" class="btn btn-secondary">Modificar Reserva</a>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
