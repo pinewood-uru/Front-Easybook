@@ -18,7 +18,7 @@ const procesarRespuesta = (res) => {
 
 
 export class Request {
-    static url = "https://localhost:3000/";
+    static url = "https://https://backend-easybook.onrender.com";
 
     // GET CLIENTS
 
