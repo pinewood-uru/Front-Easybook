@@ -16,28 +16,11 @@
 
         <div class="d-flex flex-column flex-shrink-0 text-bg-primary vh-100 ctn-aside">
             <a href="index.html"
-                class="d-flex align-items-center  link-body-emphasis text-decoration-none">
+                class="d-flex align-items-start link-body-emphasis text-decoration-none h-100">
                 <img class="logo" src="img/easybook-logo.svg" alt="logo" />
                 <span class="fs-4 pt-4 text-secondary">Easybook</span>
             </a>
-            <hr />
-            <ul class="nav nav-pills flex-column mb-auto text-lifht">
-                <li class="nav-item">
-                    <a href="Hoy.html" class="nav-link link-body-emphasis text-secondary" aria-current="page"> HOY
-                    </a>
-                </li>
-                <li>
-                    <a href="Reservas.html" class="nav-link link-body-emphasis text-secondary"> Reserva </a>
-                </li>
-                <li>
-                    <a href="nuevoadm.html" class="nav-link link-body-emphasis text-light">Agregar Adm</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link link-body-emphasis text-secondary"> Cerrar Sesión</a>
-                </li>
-
-        
-            </ul>
+            
             <hr />
 
             <!-- FOOTER -->
@@ -49,33 +32,44 @@
             </div>
         </div>
 
-        <!-- INFORMACION -->
+        <!-- LOGIN -->
 
         <section class=" container-fluid d-flex flex-column align-items-start">
-            <!-- TABLA -->
-            <h1 class="w-75 text-primary py-3">Inicio</h1>
+            
+            <h4 class="w-75 text-primary py-3">Login Administrador / Restaurante</h4>
 
-                <a href="Reservas.html" class="text-decoration-none card card-easy text-bg-primary mb-3">
-                    <div class="card-header">Reservas</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Todas las reservas</h5>
+            <form class="needs-validation text-light" novalidate="" autocomplete="on">
+                <div class="row g-3">
+                           
+      
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                      Please enter a valid email.
                     </div>
-                </a>
+                  </div>
 
-                <a href="Hoy.html" class="text-decoration-none card card-easy text-bg-secondary mb-3">
-                    <div class="card-header">Hoy</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Orden del dia</h5>
+                  <div class="col-12">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="constraseña actual">
+                    <div class="invalid-feedback">
+                      Please enter a valid password.
                     </div>
+                  </div>
+      
+      
+              <div class="w-100 justify-content-start d-flex"><button class="w-25 btn btn-primary btn-lg my-2 mx-2" type="submit" id="form-login-submit" value="Login">Log In</button></div>
+              </form> 
+              <div class="justify-content-start d-flex">
+                <a href="nuevoadm.html" class="nav-link link-body-emphasis text-light border border-light  w-25 text-center p-2 rounded my-2 mx-2" aria-current="page"> Sign in
                 </a>
-                <a href="reservaCliente.html" class="text-decoration-none card card-easy border-info  mb-3">
-                    <div class="card-header text-secondary bg-info">Reserva</div>
-                    <div class="card-body">
-                        <h5 class="card-title text-light">Crear Reserva</h5>
-                    </div>
-                </a>
+              </div>
+
             </section>
     </main>
+
+    <script src="js/login.js" type="module"></script>
 </body>
 
 </html>
