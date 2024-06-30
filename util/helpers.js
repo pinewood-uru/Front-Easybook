@@ -13,10 +13,11 @@ export const imprimir = (elemento, contenido) => {
 export const validarSesion = () => {
 
   const restaurantelog = sessionStorage.getItem("session");
+  console.log(restaurantelog);
 
   // verificamos si estamos en la pagina de login o register
   const estaEnLogin = document.location.pathname.includes("login.html");
-  const estaEnRegister = document.location.pathname.includes("nuevoadm.html");
+  const estaEnRegister = document.location.pathname.includes("nuevoadmin.html");
   const estaEnPaginaPublica = estaEnLogin || estaEnRegister;
 
   // si el usuario esta logueado y esta en una pagina publica, lo redirigimos al index

@@ -38,13 +38,13 @@
             
             <h4 class="w-75 text-primary py-3">Login Administrador / Restaurante</h4>
 
-            <form class="needs-validation text-light" novalidate="" autocomplete="on">
+            <form class="needs-validation text-light" novalidate="">
                 <div class="row g-3">
                            
       
                   <div class="col-12">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com" autocomplete="on">
                     <div class="invalid-feedback">
                       Please enter a valid email.
                     </div>
@@ -52,17 +52,19 @@
 
                   <div class="col-12">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="constraseña actual">
+                    <input type="password" class="form-control" id="password">
                     <div class="invalid-feedback">
                       Please enter a valid password.
                     </div>
                   </div>
       
       
-              <div class="w-100 justify-content-start d-flex"><button class="w-25 btn btn-primary btn-lg my-2 mx-2" type="submit" id="form-login-submit" value="Login">Log In</button></div>
+              <div class="w-100 justify-content-start d-flex">
+                <button class="w-25 btn btn-primary btn-lg my-2 mx-2" type="button" id="form-login-submit" value="Login">Log In</button>
+              </div>
               </form> 
               <div class="justify-content-start d-flex">
-                <a href="nuevoadm.html" class="nav-link link-body-emphasis text-light border border-light  w-25 text-center p-2 rounded my-2 mx-2" aria-current="page"> Sign in
+                <a href="nuevoadmin.html" class="nav-link link-body-emphasis text-light border border-light  w-25 text-center p-2 rounded my-2 mx-2" aria-current="page"> Sign in
                 </a>
               </div>
 

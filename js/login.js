@@ -9,12 +9,13 @@ const btnLogin = document.getElementById("form-login-submit");
 btnLogin.addEventListener("click", () => {
     const email = obtenerValorInput("email");
     const password = obtenerValorInput("password");
+    
     Request.login(email, password)
     .then((data) => {
-       
+       console.log(data);
         sessionStorage.setItem("session", data.session);
-        sessionStorage.setItem("user", JSON.stringify(data.user));
-        
+        sessionStorage.setItem("user", JSON.stringify(data.email));
+
         document.location.replace("index.html");
     })
     .catch((error) => {

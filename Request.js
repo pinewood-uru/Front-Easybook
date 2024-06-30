@@ -9,7 +9,7 @@ const headers = {
 const token = sessionStorage.getItem("session");
 
 if (token) {
-  headers.authorization = token;
+  headers.Authorization = token;
 }
 
 const procesarRespuesta = (res) => {
@@ -24,23 +24,36 @@ const procesarRespuesta = (res) => {
 
 const manejarErrores = (error = new Error("Error desconocido")) => {
   console.error("Ha ocurrido un error:", error.message);
+  if (error.message === "Sesión no es valida") {
+    sessionStorage.removeItem("session");
+    sessionStorage.removeItem("user");
+    document.location.replace("login.html");
+  }
   throw error.message;
 };
 
 
 
 export class Request {
-  static urlBase = "https://https://localhost:3000/";
+  static urlBase = "http://localhost:3000"
 
   // LOGIN
   static login(email, password) {
     const body = JSON.stringify({ email, password });
 
-    return fetch(obtenerUrl("loginadm"), {
+    return fetch(obtenerUrl("loginadmin"), {
       method: "POST",
       headers,
       body,
     })
+      .then(procesarRespuesta)
+      .catch(manejarErrores);
+  }
+
+  // LOGOUT
+
+  static logout() {
+    return fetch(obtenerUrl("logoutadmin"), { method: "POST", headers })
       .then(procesarRespuesta)
       .catch(manejarErrores);
   }
@@ -51,7 +64,7 @@ export class Request {
 
     const queryParams = new URLSearchParams({});
 
-    return fetch(obtenerUrl("clientes?" + queryParams), { headers })
+    return fetch(obtenerUrl("clientes" + queryParams), { headers })
       .then(procesarRespuesta)
       .catch(manejarErrores)
 
