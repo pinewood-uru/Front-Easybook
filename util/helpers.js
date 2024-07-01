@@ -3,6 +3,11 @@ import { Request } from "../Request.js";
 export const obtenerValorInput = (idInput) =>
   document.getElementById(idInput).value;
 
+export const modificarValorInput = (idInput, value) => {
+  // Verificar la sintaxis.
+  document.getElementById(idInput).value = value;
+}
+
 export const imprimir = (elemento, contenido) => {
     document.querySelector(`#${elemento}`).innerHTML = contenido;
   };

@@ -17,6 +17,7 @@ const procesarRespuesta = (res) => {
     if (data.error) {
       throw new Error(data?.error);
     }
+    console.log('Respuesta: ', data)
 
     return data;
   });
@@ -58,6 +59,14 @@ export class Request {
       .catch(manejarErrores);
   }
 
+  // REGISTER
+
+  static register(body) {
+    return fetch(obtenerUrl("registrar"), { method: "POST", body, headers })
+      .then(procesarRespuesta)
+      .catch(manejarErrores);
+  }
+
   // GET CLIENTS
 
   static getCliente(opciones = {}) {
@@ -69,4 +78,33 @@ export class Request {
       .catch(manejarErrores)
 
   }
-} 
+
+  static getClienteById(id) {
+    return fetch(obtenerUrl(`cliente/${id}`), { headers })
+      .then(procesarRespuesta)
+      .catch(manejarErrores)
+  }
+
+// POST CLIENTE
+
+static postCliente(body) {
+  return fetch(obtenerUrl("nuevocliente"), { method: "POST", headers, body })
+    .then(procesarRespuesta)
+    .catch(manejarErrores);
+}
+// PUT CLIENTE
+
+static modificarCliente(id, body) {
+  return fetch(obtenerUrl(`modificarcliente/${id}`), { method: "PUT", headers, body })
+  .then(procesarRespuesta)
+  .catch(manejarErrores);
+}
+
+// DELETE CLIENTE
+
+static deleteCliente(id) {
+  return fetch(obtenerUrl(`cliente/${id}`), { method: "DELETE", headers })
+}
+
+}
+
